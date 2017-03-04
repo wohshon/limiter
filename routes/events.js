@@ -1,0 +1,53 @@
+var express = require('express');
+var router = express.Router();
+var http = require('http');
+var Bottleneck = require("bottleneck"); // Skip when browser side 
+var limiter = new Bottleneck(5, 1000);
+
+
+
+router.post('/fuse', function(req, res, next) {
+	limiter.submit( function(cb){ 
+     call(req.body,'/events/fuse');
+	   cb();
+	  }, null);
+	  res.send('ok!');
+});
+
+router.post('/', function(req, res, next) {
+  limiter.submit( function(cb){ 
+    call(req.body,'/events');
+      cb();
+    }, null);
+    res.send('ok!');
+});
+
+//var url='http://192.168.223.130:8080';
+var url='"http://socket-rest-wohshon.44fs.preview.openshiftapps.com';
+var request=require('request');
+function call(payload, path) {
+
+    request({
+      json : true,
+      method: 'POST',
+      url : url+path,
+      //body: '{"name":"'+display+'","age":123}',
+      body: payload,
+      headers : {
+
+        'Content-Type' : 'application/json'
+      }
+    }, function(err, response, body){
+      if (err || !body){
+        console.log(res.status());
+        return res.status(500).json(err || "error");
+      }
+
+      console.log(body);
+    });
+
+
+}//call
+
+
+module.exports = router;
