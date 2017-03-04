@@ -23,7 +23,7 @@ router.post('/', function(req, res, next) {
 });
 
 //var url='http://192.168.223.130:8080';
-var url='"http://socket-rest-wohshon.44fs.preview.openshiftapps.com';
+var url='http://socket-dashboard.cloudapps.forum.rhtechofficelatam.com';
 var request=require('request');
 function call(payload, path) {
 
