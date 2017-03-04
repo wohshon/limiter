@@ -32,7 +32,7 @@ function call(payload, path) {
       method: 'POST',
       url : url+path,
       //body: '{"name":"'+display+'","age":123}',
-      body: JSON.parse(payload),
+      body: ''+payload,
       headers : {
 
         'Content-Type' : 'application/json'
