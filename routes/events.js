@@ -39,11 +39,10 @@ function call(payload, path) {
       }
     }, function(err, response, body){
       if (err || !body){
-        console.log(res.status());
-        return res.status(500).json(err || "error");
+      console.log(body);
+
       }
 
-      console.log(body);
     });
 
 
