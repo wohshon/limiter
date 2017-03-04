@@ -31,8 +31,7 @@ function call(payload, path) {
       json : true,
       method: 'POST',
       url : url+path,
-      //body: '{"name":"'+display+'","age":123}',
-      body: ''+payload,
+      body: payload,
       headers : {
 
         'Content-Type' : 'application/json'
