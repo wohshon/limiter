@@ -4,13 +4,24 @@ var http = require('http');
 var Bottleneck = require("bottleneck"); // Skip when browser side 
 var limiter = new Bottleneck(20, 1000);
 
-
+var FuseEvent=0;
 
 router.post('/fuse', function(req, res, next) {
+       //FuseEvent=0;
+       FuseEvent++;
+       console.log("Count:"+FuseEvent);
+       console.log(req.body);
 	limiter.submit( function(cb){ 
-     call(req.body,'/events/fuse');
-	   cb();
-	  }, null);
+       //call(req.body,'/events/fuse');
+       var event={"event": FuseEvent};
+       if (FuseEvent > 0) {
+           call(event,'/events/fuse');
+           FuseEvent=0;
+         }
+      	   cb();
+
+    	     }, null);
+
 	  res.send('ok!');
 });
 

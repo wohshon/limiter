@@ -9,8 +9,8 @@
 6 silly lifecycle socketio-demo@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle socketio-demo@0.0.0~start: socketio-demo@0.0.0
 8 verbose lifecycle socketio-demo@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle socketio-demo@0.0.0~start: PATH: /home/virtuser/nodejs/node-v4.4.3-linux-x64/lib/node_modules/npm/bin/node-gyp-bin:/home/virtuser/ocp3/apac_skodemo/dashboard/dashboard-client1/node_modules/.bin:/home/virtuser/mongodb/mongodb-linux-x86_64-rhel70-3.2.6/bin:/home/virtuser/nodejs/node-v4.4.3-linux-x64/bin:/home/virtuser/apache-maven-3.3.3/bin:/home/virtuser/ocp3:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/virtuser/.local/bin:/home/virtuser/bin
-10 verbose lifecycle socketio-demo@0.0.0~start: CWD: /home/virtuser/ocp3/apac_skodemo/dashboard/dashboard-client1
+9 verbose lifecycle socketio-demo@0.0.0~start: PATH: /home/virtuser/nodejs/node-v4.4.3-linux-x64/lib/node_modules/npm/bin/node-gyp-bin:/home/virtuser/ocp3/apac_skodemo/dashboard/limiter/node_modules/.bin:/home/virtuser/mongodb/mongodb-linux-x86_64-rhel70-3.2.6/bin:/home/virtuser/nodejs/node-v4.4.3-linux-x64/bin:/home/virtuser/apache-maven-3.3.3/bin:/home/virtuser/ocp3:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/virtuser/.local/bin:/home/virtuser/bin
+10 verbose lifecycle socketio-demo@0.0.0~start: CWD: /home/virtuser/ocp3/apac_skodemo/dashboard/limiter
 11 silly lifecycle socketio-demo@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle socketio-demo@0.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle socketio-demo@0.0.0~start: Failed to exec start script
@@ -25,7 +25,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:827:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 15 verbose pkgid socketio-demo@0.0.0
-16 verbose cwd /home/virtuser/ocp3/apac_skodemo/dashboard/dashboard-client1
+16 verbose cwd /home/virtuser/ocp3/apac_skodemo/dashboard/limiter
 17 error Linux 3.10.0-324.el7.x86_64
 18 error argv "/home/virtuser/nodejs/node-v4.4.3-linux-x64/bin/node" "/home/virtuser/nodejs/node-v4.4.3-linux-x64/bin/npm" "start"
 19 error node v4.4.3
