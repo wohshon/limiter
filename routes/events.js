@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var http = require('http');
 var Bottleneck = require("bottleneck"); // Skip when browser side 
-var limiter = new Bottleneck(2, 1000);
+var limiter = new Bottleneck(1, 1000);
 
 var FuseEvent=0;
 
