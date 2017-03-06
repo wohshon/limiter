@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var http = require('http');
 var Bottleneck = require("bottleneck"); // Skip when browser side 
-var limiter = new Bottleneck(2, 1000);
+var limiter = new Bottleneck(1, 1000);
 
 var FuseEvent=0;
 
@@ -33,8 +33,8 @@ router.post('/', function(req, res, next) {
     res.send('ok!');
 });
 
-//var url='http://192.168.223.130:8080';
-var url='http://socket-dashboard.cloudapps.forum.rhtechofficelatam.com';
+var url='http://192.168.223.130:8080';
+//var url='http://socket-dashboard.cloudapps.forum.rhtechofficelatam.com';
 var request=require('request');
 function call(payload, path) {
 
